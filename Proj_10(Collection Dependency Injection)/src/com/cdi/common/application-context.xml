@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="btech1styrcse" class="com.cdi.beans.Course">
+		<property name="subjects">
+			<list value-type="java.lang.String">
+				<value>C</value>
+				<value>C++</value>
+				<value>OS</value>
+				<value>Java</value>
+				<value>Spring</value>
+				<value>Hibernate</value>
+				<value>Web-Services</value>
+			</list>
+		</property>
+		<property name="faculties">
+			<set value-type="java.lang.String">
+				<value>Mitu Mallick</value>
+				<value>Bibhuti Bhusan Khalapaika</value>
+				<value>Anil Biswal</value>
+				<value>Pritam Kumar Behera</value>
+				<value>Subhransu Sekhar Sethy</value>
+				<value>Abinash Pradhan</value>
+				<value>Joyti Ranjan Baral</value>
+			</set>
+		</property>
+	</bean>
+</beans>
