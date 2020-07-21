@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="software" class="com.alliswell.beans.SoftwareDeveloper" />
+
+	<bean id="fullstack" class="com.alliswell.beans.FullstackDeveloper" />
+
+	<bean id="ui" class="com.alliswell.beans.UIDeveloper" />
+
+	<bean id="naukri" class="com.alliswell.beans.NaukriJobPortal">
+		<constructor-arg name="jobApplied" ref="software" />
+	</bean>
+
+	<bean id="shine" class="com.alliswell.beans.ShineJobPortal">
+		<constructor-arg name="jobApplied1" ref="fullstack" />
+	</bean>
+
+	<bean id="monster" class="com.alliswell.beans.MonsterJobPortal">
+		<constructor-arg name="jobApplied2" ref="ui" />
+	</bean>
+
+</beans>
