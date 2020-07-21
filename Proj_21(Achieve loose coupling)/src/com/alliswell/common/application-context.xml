@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="study" class="com.alliswell.beans.StudyLoan" />
+
+	<bean id="personal" class="com.alliswell.beans.PersonalLoan" />
+
+	<bean id="house" class="com.alliswell.beans.HouseLoan" />
+
+	<bean id="sbi" class="com.alliswell.beans.SBIBank">
+		<constructor-arg name="loanApproved" ref="study" />
+	</bean>
+
+	<bean id="hdfc" class="com.alliswell.beans.HDFCBank">
+		<constructor-arg name="loanApproved1" ref="house" />
+	</bean>
+
+	<bean id="sys" class="com.alliswell.beans.SyndicateBank">
+		<constructor-arg name="loanApproved2" ref="personal" />
+	</bean>
+</beans>
