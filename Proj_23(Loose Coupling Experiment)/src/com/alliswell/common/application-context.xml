@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="cheesePizza" class="com.alliswell.beans.CheesePizza" />
+
+	<bean id="chiskenPizza" class="com.alliswell.beans.ChickenPizza" />
+
+	<bean id="fishPizza" class="com.alliswell.beans.FishPizza" />
+
+	<bean id="muttonPizza" class="com.alliswell.beans.MuttonPizza" />
+
+	<bean id="pannerPizza" class="com.alliswell.beans.PannerPizza" />
+
+	<bean id="mashroomPizza" class="com.alliswell.beans.MashroomPizza" />
+
+	<bean id="gurgaonPizzaBakery" class="com.alliswell.beans.GurgaonPizzaBakery">
+		<!-- <property name="pizza" ref="muttonPizza" /> -->
+		<constructor-arg name="pizza" ref="chiskenPizza" />
+	</bean>
+
+	<bean id="punePizzaBakery" class="com.alliswell.beans.PunePizzaBakery">
+		<!-- <property name="pizza" ref="pannerPizza" /> -->
+		<constructor-arg name="pizza" ref="mashroomPizza" />
+	</bean>
+
+</beans>
