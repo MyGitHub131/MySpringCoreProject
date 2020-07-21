@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean id="btech1yrstudent" class="com.cdi.beans.Course">
+		<constructor-arg>
+			<list value-type="java.lang.String">
+				<value>c</value>
+				<value>c++</value>
+				<value>OS</value>
+			</list>
+		</constructor-arg>
+
+		<property name="faculties">
+			<set value-type="java.lang.String">
+				<value>Arobinda Panda</value>
+				<value>Samleswary Prasad Nayak</value>
+				<value>Alekha Biswal</value>
+			</set>
+		</property>
+
+	</bean>
+
+	<bean id="college" class="com.cdi.beans.College">
+		<property name="hodToCourseMap">
+			<map key-type="java.lang.String" value-type="com.cdi.beans.Course">
+				<entry key="Bibhuti" value-ref="btech1yrstudent" />
+			</map>
+		</property>
+
+		<property name="courseToppers">
+			<props>
+				<prop key="Amit Swain">c</prop>
+				<prop key="Puspanjali Sahu">c++</prop>
+			</props>
+		</property>
+
+	</bean>
+
+</beans>
