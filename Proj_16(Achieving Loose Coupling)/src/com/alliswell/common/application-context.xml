@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="missedCallAlertService" class="com.alliswell.beans.MissedCallAlertService" />
+
+	<bean id="helloTuneService" class="com.alliswell.beans.HelloTuneService" />
+
+	<bean id="dataPackService" class="com.alliswell.beans.DataPackService" />
+
+	<bean id="jioSim" class="com.alliswell.beans.JioSim">
+
+		<!-- <property name="service1" ref="helloTuneService"/> -->
+		<constructor-arg name="service1" ref="helloTuneService" />
+
+	</bean>
+
+	<bean id="airtelSim" class="com.alliswell.beans.AirtelSim">
+
+		<!-- <property name="service" ref="missedCallAlertService"/> -->
+		<constructor-arg name="service" ref="missedCallAlertService" />
+
+	</bean>
+
+</beans>
