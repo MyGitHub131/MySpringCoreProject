@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="classpath:com/alliswell/common/SimCard-Activated.Properties" />
+
+	<bean id="mobile" class="com.alliswell.beans.Mobile">
+		<property name="iSimCard" ref="ril" />
+		<property name="calling" value="${Mobile.calling}" />
+		<property name="missedCall" value="${Mobile.missedCall}" />
+		<property name="dataPack" value="${Mobile.dataPack}" />
+		<property name="msgDelivery" value="${Mobile.msgDelivery}" />
+		<property name="confrenceCall" value="${Mobile.confrenceCall}" />
+	</bean>
+
+	<!-- <bean id="mobile" class="com.alliswell.beans.Mobile">
+		<property name="iSimCard" ref="air" />
+		<property name="calling" value="5G" />
+		<property name="missedCall" value="4 Times" />
+		<property name="dataPack" value="5GB" />
+		<property name="msgDelivery" value="10 Delivery" />
+		<property name="confrenceCall" value="7 Peoples" />
+	</bean> -->
+
+	<bean id="air" class="com.alliswell.beans.Airtel" />
+	<bean id="jio" class="com.alliswell.beans.Jio" />
+	<bean id="vod" class="com.alliswell.beans.Vodafone" />
+	<bean id="bsn" class="com.alliswell.beans.Bsnl" />
+	<bean id="ril" class="com.alliswell.beans.Reliance" />
+
+</beans>
