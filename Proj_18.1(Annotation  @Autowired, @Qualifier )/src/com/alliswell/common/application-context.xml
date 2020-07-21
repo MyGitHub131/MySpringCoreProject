@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <context:property-placeholder
+		location="classpath:com/alliswell/common/Bike_Info.Properties" /> -->
+
+	<context:property-placeholder
+		location="classpath:com/alliswell/common/PressureCookers_Info.Properties" />
+
+	<!-- <bean id="bike" class="com.alliswell.beans.Bike">
+		<property name="id_no" value="${Bike.id_no}" />
+		<property name="name" value="${Bike.name}" />
+		<property name="brand" value="${Bike.brand}" />
+		<property name="color" value="${Bike.color}" />
+	</bean> -->
+	<bean id="pressureCookers" class="com.alliswell.beans.PressureCookers">
+		<property name="serial_no" value="${PressureCookers.serial_no}" />
+		<property name="company" value="${PressureCookers.company}" />
+		<property name="model" value="${PressureCookers.model}" />
+		<property name="weight" value="${PressureCookers.weight}" />
+		<property name="warranty_period" value="${PressureCookers.warranty_period}" />
+		<property name="cost" value="${PressureCookers.cost}" />
+	</bean>
+
+
+	<!-- <context:annotation-config /> -->
+</beans>
