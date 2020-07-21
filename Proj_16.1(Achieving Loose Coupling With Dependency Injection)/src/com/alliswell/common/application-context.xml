@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="scienceCheatObjectValue" class="com.alliswell.beans.ScienceCheat" />
+
+	<bean id="englishCheatObjectValue" class="com.alliswell.beans.EnglishCheat" />
+
+	<bean id="historyCheatObjectValue" class="com.alliswell.beans.HistoryCheat" />
+
+	<bean id="mathCheatingObjectValue" class="com.alliswell.beans.MathCheat" />
+
+	<bean id="hindiCheatingObjectValue" class="com.alliswell.beans.HindiCheat" />
+
+	<bean id="geographyCheatingObjectValue" class="com.alliswell.beans.GeographyCheat" />
+
+	<bean id="student" class="com.alliswell.beans.Student">
+		<!-- <property name="icheat" ref="hindiCheatingObjectValue" /> -->
+		<constructor-arg name="icheat" ref="geographyCheatingObjectValue" />
+	</bean>
+
+</beans>
