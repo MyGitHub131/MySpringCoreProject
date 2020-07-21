@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="javaDeveloper" class="com.alliswell.beans.JavaDeveloper" />
+
+	<bean id="androidDeveloper" class="com.alliswell.beans.AndroidDeveloper" />
+
+	<bean id="databaseDeveloper" class="com.alliswell.beans.DatabaseDeveloper" />
+
+	<bean id="fullstackDeveloper" class="com.alliswell.beans.FullStackDeveloper" />
+
+	<bean id="uiDeveloper" class="com.alliswell.beans.UIDeveloper" />
+
+	<bean id="techsupportDeveloper" class="com.alliswell.beans.TechSupportDeveloper" />
+
+	<bean id="naukriJobPortal" class="com.alliswell.beans.NaukriJobPortal">
+		<!-- <property name="jobApply" ref="javaDeveloper" /> -->
+		<constructor-arg name="jobApply" ref="databaseDeveloper" />
+	</bean>
+
+	<bean id="shineJobPortal" class="com.alliswell.beans.ShineJobPortal">
+		<!-- <property name="jobApply1" ref="fullstackDeveloper" /> -->
+		<constructor-arg name="jobApply1" ref="androidDeveloper" />
+	</bean>
+
+	<bean id="monsterJobPortal" class="com.alliswell.beans.MonsterJobPortal">
+		<!-- <property name="jobApply2" ref="androidDeveloper" /> -->
+		<constructor-arg name="jobApply2" ref="uiDeveloper" />
+	</bean>
+
+</beans>
