@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="classpath:com/alliswell/common/Car-Information.Properties" />
+	<bean id="car" class="com.alliswell.beans.Car">
+		<property name="iwhieel" ref="rebk" />
+		<property name="name" value="${Car.name}" />
+		<property name="model" value="${Car.model}" />
+		<property name="fuel" value="${Car.fuel}" />
+		<property name="gear" value="${Car.gear}"/>
+		<property name="kmph" value="${Car.kmph}" />
+	</bean>
+	
+	<bean id="ceat" class="com.alliswell.beans.CeatTyres" />
+	<bean id="mrf" class="com.alliswell.beans.MrfTyres" />
+	<bean id="rebk" class="com.alliswell.beans.ReebokTyres" />
+	<bean id="ralson" class="com.alliswell.beans.RalsonTyres"/>
+	
+	
+	<!-- <bean id="car" class="com.alliswell.beans.Car">
+		<property name="iwhieel" ref="ralson"/>
+		<property name="name" value="Audi Car"/>
+		<property name="model" value="Audi 7 Series"/>
+		<property name="fuel" value="Petrol"/>
+		<property name="kmph" value="250 Kmph"/>
+	</bean>
+	
+	<bean id="ceat" class="com.alliswell.beans.CeatTyres"/>
+	<bean id="mrf" class="com.alliswell.beans.MrfTyres"/>
+	<bean id="rebk" class="com.alliswell.beans.ReebokTyres"/>
+	<bean id="ralson" class="com.alliswell.beans.RalsonTyres"/> -->
+
+</beans>
