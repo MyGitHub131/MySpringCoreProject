@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="osdemo" class="com.alliswell.beans.OS" />
+
+	<bean id="delllaptop" class="com.alliswell.beans.DellLaptop">
+		<property name="id" value="105" />
+		<property name="os" ref="osdemo" />
+		<!-- <property name="id" value="107"/> <property name="os"> <bean class="com.alliswell.beans.OS"/> 
+			</property> -->
+	</bean>
+
+	<bean id="hplaptop" class="com.alliswell.beans.HpLaptop">
+		<property name="os1" ref="osdemo" />
+		<!-- <property name="os1"> <bean class="com.alliswell.beans.OS"/> </property> -->
+	</bean>
+
+	<bean id="lenovelaptop" class="com.alliswell.beans.LenoveLaptop">
+		<property name="os2" ref="osdemo" />
+		<!-- <property name="os2"> <bean class="com.alliswell.beans.OS"/> </property> -->
+	</bean>
+
+	<bean id="accerlaptop" class="com.alliswell.beans.AccerLaptop">
+		<property name="os3" ref="osdemo" />
+		<!-- <property name="os3"> <bean class="com.alliswell.beans.OS"/> </property> -->
+	</bean>
+
+</beans>
