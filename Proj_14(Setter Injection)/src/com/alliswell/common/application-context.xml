@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.alliswell.beans.Student">
+		<!-- <property name="studentName" value="Bibhuti Bhusan Khalapaika"/> <property 
+			name="studentId" value="1"/> -->
+
+		<constructor-arg name="studentName" value="Bibhuti Bhusan Khalapaika" />
+		<constructor-arg name="studentId" value="1" />
+	</bean>
+
+	<bean id="abinash" class="com.alliswell.beans.Student">
+		<!-- <property name="studentName" value="Abinash Pradhan"/> <property name="studentId" 
+			value="2"/> -->
+
+		<constructor-arg name="studentName" value="Abinash Pradhan" />
+		<constructor-arg name="studentId" value="2" />
+	</bean>
+
+</beans>
