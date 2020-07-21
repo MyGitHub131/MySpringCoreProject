@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <context:property-placeholder
+		location="classpath:com/alliswell/common/HardDisk01.Properties" /> -->
+
+	<context:property-placeholder
+		location="classpath:com/alliswell/common/HardDisk02.Properties" />
+
+	<!-- <bean id="hardDisk01" class="com.alliswell.beans.HardDisk">
+		<property name="hardDisk_no" value="${HardDisk.HardDisk_no}" />
+		<property name="name" value="${HardDisk.name}" />
+		<property name="capacity" value="${HardDisk.capacity}" />
+		<property name="brand" value="${HardDisk.brand}" />
+		<property name="warranty" value="${HardDisk.warranty}" />
+	</bean> -->
+
+	<bean id="hardDisk02" class="com.alliswell.beans.HardDisk">
+		<property name="hardDisk_no" value="${HardDisk.hardDisk_no}" />
+		<property name="name" value="${HardDisk.name}" />
+		<property name="capacity" value="${HardDisk.capacity}" />
+		<property name="brand" value="${HardDisk.brand}" />
+		<property name="warranty" value="${HardDisk.warranty}" />
+	</bean>
+
+	<bean id="laptop" class="com.alliswell.beans.Laptop">
+		<!-- <property name="hardDisk" ref="hardDisk02" /> -->
+	</bean>
+	<context:annotation-config />
+</beans>
