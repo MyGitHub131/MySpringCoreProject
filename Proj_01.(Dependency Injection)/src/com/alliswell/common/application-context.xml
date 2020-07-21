@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="classpath:com/alliswell/common/Project_Info.Properties" />
+
+	<bean id="project1" class="com.alliswell.beans.Project">
+		<!-- <property name="project_id" value="${Project.project_id}" />
+		<property name="name" value="${Project.name}" />
+		<property name="domain" value="${Project.domain}" />
+		<property name="client" value="${Project.client}" />
+		<property name="duration" value="${Project.duration}" />
+		<property name="status" value="${Project.status}" /> -->
+	</bean>
+
+	<bean id="emp" class="com.alliswell.beans.Employee">
+		<property name="project" ref="project1" />
+	</bean>
+	<context:annotation-config/>
+
+</beans>
+
+
