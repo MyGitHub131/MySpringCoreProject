@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath:com/alliswell/common/Camera_Information.Properties"/>
+
+	<bean id="sonycameraObjectValue" class="com.alliswell.beans.Camera">
+		<property name="nameOfCamera" value="${camera.nameOfCamera}" />
+		<property name="noOfCamera" value="${camera.noOfCamera}" />
+	</bean>
+	
+	<bean id="mobileDevice" class="com.alliswell.beans.MobileDevice"/>
+	
+
+	<context:annotation-config />
+
+</beans> 
