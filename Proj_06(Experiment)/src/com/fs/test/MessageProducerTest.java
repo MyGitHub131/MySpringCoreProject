@@ -19,7 +19,7 @@ public class MessageProducerTest {
 		
 		BeanFactory factory=new XmlBeanFactory(new ClassPathResource("com/fs/common/application-context.xml"));
 		MessageWriter messageWriter=(MessageWriter) factory.getBean("messageWriter");
-		IMessageProducer messageProducer=(IMessageProducer) factory.getBean("htmlMessageProducer");
+		IMessageProducer messageProducer=(IMessageProducer) factory.getBean("pdfMessageProducer");
 	    messageWriter.setMessageProducer(messageProducer);
 	    messageWriter.writeMessage("Hi......Bibhuti");
 	}
