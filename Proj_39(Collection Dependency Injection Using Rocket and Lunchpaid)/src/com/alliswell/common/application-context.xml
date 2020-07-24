@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="agni5Rocket" class="com.alliswell.beans.Rocket">
+		<property name="rockets">
+			<list value-type="java.lang.String">
+				<value>Agni-1 Missile</value>
+				<value>Agni-2 Missile</value>
+				<value>Agni-3 Missile</value>
+				<value>Agni-4 Missile</value>
+				<value>Agni-5 Missile</value>
+			</list>
+		</property>
+
+		<property name="scientist">
+			<set value-type="java.lang.String">
+				<value>Sc.Mr. Anurag Padhi</value>
+				<value>Sc.Mr. Karma Nagrakoti</value>
+				<value>Sc.Mr. APJ.Abdul.Kalam</value>
+				<value>Sc.Mr. VPS.Rao</value>
+				<value>Sc.Mr. Nirupama.Rao</value>
+			</set>
+		</property>
+	</bean>
+	<bean id="lunchPaid" class="com.alliswell.beans.LunchPaid">
+		<property name="chiefOfScientist">
+			<map key-type="java.lang.String" value-type="com.alliswell.beans.Rocket">
+				<entry key="Pranati" value-ref="agni5Rocket" />
+			</map>
+		</property>
+
+		<property name="mostPopulerRocketScientist">
+			<props>
+				<prop key="Sc.Mr. APJ.Abdul.Kalam">Agni-1 Missile</prop>
+				<prop key="Sc.Mr. Nirupama.Rao">Agni-3 Missile</prop>
+				<prop key="Sc.Mr. Karma Nagrakoti"> Agni-5 Missile</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
