@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="btech1YrStudent" class="com.alliswell.beans.Course">
+		<property name="subjects">
+			<list value-type="java.lang.String">
+				<value>Java</value>
+				<value>Python</value>
+				<value>Ruby</value>
+			</list>
+		</property>
+
+		<property name="faculties">
+			<set value-type="java.lang.String">
+				<value>Mr.Samaleswary Prasad Nayak</value>
+				<value>Mr.Arobind Mishra</value>
+				<value>Mr.Alekha Patra</value>
+			</set>
+		</property>
+	</bean>
+	
+	<bean id="college" class="com.alliswell.beans.College">
+		<property name="hodToCourseMap">
+			<map key-type="java.lang.String" value-type="com.alliswell.beans.Course">
+				<entry key="Bibhuti" value-ref="btech1YrStudent" />
+			</map>
+		</property>
+
+		<property name="courseToppers">
+			<props>
+				<prop key="Amit Swain">Python</prop>
+				<prop key="Bibhuti Bhusan Khalapaika">Java</prop>
+			</props>
+		</property>
+		
+	</bean>
+
+</beans>
