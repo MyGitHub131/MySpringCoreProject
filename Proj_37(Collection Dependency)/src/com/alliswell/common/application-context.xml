@@ -7,7 +7,7 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="restaurant1" class="com.alliswell.beans.Restaurant">
-		<property name="workers">
+		<property name="customers">
 			<list value-type="java.lang.String">
 				<value>Mr.ABC</value>
 				<value>Mr.DEF</value>

@@ -9,7 +9,7 @@ public class RestaurantTesting {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/alliswell/common/application-context.xml");
 		Restaurant restaurant = ctx.getBean("restaurant1", Restaurant.class);
-		restaurant.displayWorkers();
+		restaurant.greetCustomers();
 
 	}
 }
