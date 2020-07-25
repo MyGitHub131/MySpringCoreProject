@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="engine1" class="com.alliswell.beans.Engine">
+		<property name="listOfEngines">
+			<list value-type="java.lang.String">
+				<value>Honda</value>
+				<value>MarutiSuzuki</value>
+				<value>Mahindra</value>
+				<value>Tata</value>
+			</list>
+		</property>
+
+		<property name="Enginners">
+			<set value-type="java.lang.String">
+				<value>Mr.E. ABC</value>
+				<value>Mr.E. DEF</value>
+				<value>Mr.E. GHI</value>
+				<value>Mr.E. JKL</value>
+			</set>
+		</property>
+	</bean>
+	<bean id="car1" class="com.alliswell.beans.Car">
+		<property name="headOfEnginners">
+			<map key-type="java.lang.String" value-type="com.alliswell.beans.Engine">
+				<entry key="Mitu Mallick" value-ref="engine1" />
+			</map>
+		</property>
+
+		<property name="mostPopulerEngineers">
+			<props>
+				<prop key="Honda">Mr.E. DEF</prop>
+				<prop key="Tata">Mr.E. ABC</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
