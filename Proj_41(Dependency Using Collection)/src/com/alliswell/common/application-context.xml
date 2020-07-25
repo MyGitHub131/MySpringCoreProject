@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="hardDisk1" class="com.alliswell.beans.HardDisk">
+		<property name="hardDiskChips">
+			<list value-type="java.lang.String">
+				<value>Hitachi</value>
+				<value>Transcend</value>
+				<value>SamSung</value>
+				<value>Panasonic</value>
+			</list>
+		</property>
+		<property name="company">
+			<set value-type="java.lang.String">
+				<value>Southkoria</value>
+				<value>U.S.A</value>
+				<value>Japan</value>
+				<value>China</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean id="laptop1" class="com.alliswell.beans.Laptop">
+		<property name="highestRatingHardDiskChips">
+			<map key-type="java.lang.String" value-type="com.alliswell.beans.HardDisk">
+				<entry key="Manisha Mohapatra" value-ref="hardDisk1" />
+			</map>
+		</property>
+		<property name="mostPopulerHardDisk">
+			<props>
+				<prop key="Transcend">U.S.A</prop>
+				<prop key="Hitachi">Japan</prop>
+				<prop key="Panasonic">Southkoria</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
